@@ -7,36 +7,42 @@ async function screenshotConversation() {
 
   var totalHeight = 0;
   var staticWidth = 0;
+  var blocks = [];
+  var block_heights = [];
 
-  var y = 0;
+  console.log("Rendering " + chatHTMLs.length + " messages.");
   for (let i = 0; i < chatHTMLs.length - 1; i++) {
     chatHTML = chatHTMLs[i];
     // Get actual message block canvas height and width to set result canvas size
     await html2canvas(chatHTML).then(function (canvas) {
-      var resultCanvas = x.document.createElement("canvas");
-      console.log("canvas w: " + canvas.width + " h: " + canvas.height)
+      var block = x.document.createElement("canvas");
+      block.width = canvas.width;
+      block.height = canvas.height;
+
+      var blockCtx = block.getContext("2d");
+      blockCtx.drawImage(canvas, 0, 0);
+
+      blocks.push(block);
+      block_heights.push(canvas.height);
       totalHeight += canvas.height;
       staticWidth = canvas.width;
     });
   }
 
   var resultCanvas = x.document.createElement("canvas");
-  console.log("--------------------");
-  console.log("totalHeight: " + totalHeight + " staticWidth: " + staticWidth);
-  console.log("--------------------");
   resultCanvas.height = totalHeight;
   resultCanvas.width = staticWidth;
   var resultCtx = resultCanvas.getContext("2d");
 
-  for (let i = 0; i < chatHTMLs.length - 1; i++) {
-    chatHTML = chatHTMLs[i];
+  var y = 0;
+  console.log("Drawing " + blocks.length + " messages.");
+  for (let i = 0; i < blocks.length; i++) {
     // Use the html2canvas library to create a canvas element from the chat HTML
-    await html2canvas(chatHTML).then(function (canvas) {
-      resultCtx.drawImage(canvas, 0, y);
-      y += canvas.height;
-    });
+    resultCtx.drawImage(blocks[i], 0, y);
+    y += block_heights[i];
   }
   x.document.body.appendChild(resultCanvas);
+  console.log("done");
 }
 
 chrome.action.onClicked.addListener((tab) => {
