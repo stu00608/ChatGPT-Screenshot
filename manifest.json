@@ -1,8 +1,8 @@
 {
-  "name": "ChatGPT Screenshot Extension",
+  "name": "ChatGPT Screenshot",
   "action": {},
   "manifest_version": 3,
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "Takes a screenshot of the whole conversation in each chat room in a ChatGPT webpage",
   "permissions": [
     "activeTab",
@@ -12,10 +12,10 @@
     "service_worker": "background.js"
   },
   "icons": {
-    "16": "icon.png",
-    "32": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "icon/icon16.png",
+    "32": "icon/icon32.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
   },
   "content_scripts": [
     {
