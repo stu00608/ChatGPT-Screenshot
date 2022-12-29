@@ -1,7 +1,7 @@
 
 
 <p align="center">
-<img width="720" alt="mnist_canvas_banner" src="https://user-images.githubusercontent.cCancel changesom/40068587/209906878-0cd508ce-6b14-4ad3-b28d-7a6d46322af9.png">
+<img width="720" alt="mnist_canvas_banner" src="https://user-images.githubusercontent.com/40068587/209906878-0cd508ce-6b14-4ad3-b28d-7a6d46322af9.png">
 </p>
 
 <h3 align="center">
