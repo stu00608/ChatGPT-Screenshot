@@ -19,11 +19,7 @@
 ---
 # Demo
 
-
-
 https://user-images.githubusercontent.com/40068587/209952495-db92c21e-3520-4d34-b4b4-9d1f3374d334.mp4
-
-
 
 ---
 
@@ -31,4 +27,9 @@ https://user-images.githubusercontent.com/40068587/209952495-db92c21e-3520-4d34-
 - Wanna save the conversation content with ChatGPT but too lazy to screenshot one by one? Get this extension to screenshot the complete conversation by one click!
 
 # Installation
-- Download html2canvas.min.js from [here](https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js)
+
+## Extension Store
+- [Link Here]()
+
+## Local
+- Go to release page and download the `chatgpt_screenshot_release_*.*.*.zip`, extract it, goto page `chrome://extensions`, open developer mode, choose `Load unpacked`, choose the extracted folder, then you're good to go!
