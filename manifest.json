@@ -2,7 +2,7 @@
   "name": "ChatGPT Screenshot",
   "action": {},
   "manifest_version": 3,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Takes a screenshot of the whole conversation in each chat room in a ChatGPT webpage",
   "permissions": [
     "activeTab",
