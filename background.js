@@ -2,9 +2,6 @@ async function screenshotConversation() {
   // TODO: Make the selector more specific.
   var chatHTMLs = document.querySelector('#__next div div main div div div').childNodes;
 
-  // Open a new window to display the screenshots
-  var x = window.open();
-
   var totalHeight = 0;
   var staticWidth = 0;
   var blocks = [];
@@ -15,7 +12,7 @@ async function screenshotConversation() {
     chatHTML = chatHTMLs[i];
     // Get actual message block canvas height and width to set result canvas size
     await html2canvas(chatHTML).then(function (canvas) {
-      var block = x.document.createElement("canvas");
+      var block = document.createElement("canvas");
       block.width = canvas.width;
       block.height = canvas.height;
 
@@ -29,7 +26,7 @@ async function screenshotConversation() {
     });
   }
 
-  var resultCanvas = x.document.createElement("canvas");
+  var resultCanvas = document.createElement("canvas");
   resultCanvas.height = totalHeight;
   resultCanvas.width = staticWidth;
   var resultCtx = resultCanvas.getContext("2d");
@@ -41,7 +38,10 @@ async function screenshotConversation() {
     resultCtx.drawImage(blocks[i], 0, y);
     y += block_heights[i];
   }
-  x.document.body.appendChild(resultCanvas);
+  let link = document.createElement("a");
+  link.download = "chat_screenshot.png";
+  link.href = resultCanvas.toDataURL("image/png");
+  link.click();
   console.log("done");
 }
 
