@@ -17,6 +17,15 @@
 </h3>
 
 ---
+# Demo
+
+
+
+https://user-images.githubusercontent.com/40068587/209952495-db92c21e-3520-4d34-b4b4-9d1f3374d334.mp4
+
+
+
+---
 
 # Description
 - Wanna save the conversation content with ChatGPT but too lazy to screenshot one by one? Get this extension to screenshot the complete conversation by one click!
