@@ -17,6 +17,10 @@
 </h3>
 
 ---
+# Installation
+- [在Chrome Extension Store下載！](https://chrome.google.com/webstore/detail/chatgpt-screenshot/ppggknlipehkckcplghjfcoemdeaieme?hl=zh-TW&authuser=0)
+
+---
 # Demo
 
 https://user-images.githubusercontent.com/40068587/209952495-db92c21e-3520-4d34-b4b4-9d1f3374d334.mp4
@@ -29,7 +33,7 @@ https://user-images.githubusercontent.com/40068587/209952495-db92c21e-3520-4d34-
 # Installation
 
 ## Extension Store
-- [Link Here]()
+- [Link Here](https://chrome.google.com/webstore/detail/chatgpt-screenshot/ppggknlipehkckcplghjfcoemdeaieme?hl=zh-TW&authuser=0)
 
 ## Local
 - Go to release page and download the `chatgpt_screenshot_release_*.*.*.zip`, extract it, goto page `chrome://extensions`, open developer mode, choose `Load unpacked`, choose the extracted folder, then you're good to go!
