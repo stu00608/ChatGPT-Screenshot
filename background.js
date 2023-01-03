@@ -1,6 +1,12 @@
 async function screenshotConversation() {
   // TODO: Make the selector more specific.
+
+  // Get the message block, if it's chatting then take one more level of div, otherwise it won't get messages.
   var chatHTMLs = document.querySelector('#__next div div main div div div').childNodes;
+  if (chatHTMLs.length == 1) {
+    console.log("No messages found.");
+    chatHTMLs = document.querySelector('#__next div div main div div div div').childNodes;
+  }
 
   var totalHeight = 0;
   var staticWidth = 0;
